@@ -190,8 +190,6 @@
                 <div class="col-md-9" role="main">
 
                 {% include "content.html" %}
-                <hr/>
-                {% include "comments.html" %}
 
 
 
@@ -201,6 +199,9 @@
 
         <footer class="col-md-12">
           {%- block footer %}
+            <hr/>
+            {% include "comments.html" %}
+
             <hr>
             {%- if config.copyright %}
                 <p>{{ config.copyright }}</p>
