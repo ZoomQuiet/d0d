@@ -56,11 +56,12 @@ from invoke import task
 #from fabric.context_managers import cd
 from textwrap import dedent as dedentxt
 
-CAMPROOT = os.environ.get("ABOOKS_ROOT")
+CAMPROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+#os.environ.get("ABOOKS_ROOT")
 CSITES = {'d0d':{'src':'d0d_mkdocs'
-                , 'ghp':'d0d'
+                , 'ghp':'d0d_gh-pages'
                 , 'log':''
-                , 'CNAME':'d0d.101.fun'
+                , 'CNAME':'d0d.fun'
                 }
         }
 
@@ -84,7 +85,7 @@ def cd(c, path2):
     c.run('pwd')
 
 #@task 
-def ccname(c, site):
+def ccname(c, site="d0d"):
     '''base cfg. write CNAME into aim path
     '''
     #print(CSITES[site]['CNAME'])
@@ -108,7 +109,7 @@ def sync4media(c):
 
 
 @task 
-def pl(c, site):
+def pl(c, site="d0d"):
     '''$ inv pl [101|py] <- pull all relation repo.
     '''
     global CAMPROOT
@@ -158,7 +159,7 @@ def pu(c):
 
 
 #@task 
-def gh(c, site):
+def gh(c, site="d0d"):
     '''$ inv gh [101|py] <- push gh-pages for site publish
     '''
     global CAMPROOT
@@ -224,7 +225,7 @@ def recover(c):
 
 
 @task 
-def pub(c, site):
+def pub(c, site="d0d"):
     '''$ inv pub [101|py] <- auto deploy new site version base multi-repo.
     '''
     global TRIGGER
@@ -246,24 +247,6 @@ def pub(c, site):
     gh(c, site)
     ver(c)
 
-    return None
-    
-    chktri(c)
-    if TRIGGER:
-        print('auto deplo NOW:')
-        #return None
-        bu(c)
-        recover(c)
-
-        pu(c)
-        #ccname(c)
-        #sync4media(c)
-        gh(c, site)
-        ver(c)
-
-    else:
-        print('nothing need deploy')
-    
     return None
 
 
