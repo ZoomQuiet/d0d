@@ -10,7 +10,8 @@
 
 ## logging
 
-- 200822 ZQ init. offical site
+- 210620 ZQ re-init. offical site => ZoomQuiet
+- 200822 ZQ init. offical site as 101.camp
 - 200821 ZQ example finished
 - 200701 ZQ re-factory examples
 - 200601 ZQ init. PaaS

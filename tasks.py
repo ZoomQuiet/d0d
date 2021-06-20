@@ -60,7 +60,7 @@ CAMPROOT = os.environ.get("ABOOKS_ROOT")
 CSITES = {'d0d':{'src':'d0d_mkdocs'
                 , 'ghp':'d0d'
                 , 'log':''
-                , 'CNAME':'d0d.101.camp'
+                , 'CNAME':'d0d.101.fun'
                 }
         }
 
