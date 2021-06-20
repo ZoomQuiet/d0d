@@ -25,11 +25,11 @@
 - 200227 ZQ Linux.cn 触发
 
 ```
-   o  o-o     o     0    o-o    0     o--o o   o o   o
-   | o  /o    |    /|   o  /o  /|     |    |   | |\  |
- o-O | / |  o-O   o |   | / | o |     O-o  |   | | \ |
-|  | o/  o |  |     |   o/  o   |     |    |   | |  \|
- o-o  o-o   o-o O o-o-o  o-o  o-o-o O o     o-o  o   o
+   o  o-o     o   o--o o   o o   o
+   | o  /o    |   |    |   | |\  |
+ o-O | / |  o-O   O-o  |   | | \ |
+|  | o/  o |  |   |    |   | |  \|
+ o-o  o-o   o-o O o     o-o  o   o
 
 ```
 
